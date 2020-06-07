@@ -151,8 +151,8 @@ nav div a:hover {
     margin: 0 auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   #pic div {
     height: 300px;
@@ -168,6 +168,13 @@ nav div a:hover {
     margin: 0 auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #content h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
 }
 /*# sourceMappingURL=style.css.map */
