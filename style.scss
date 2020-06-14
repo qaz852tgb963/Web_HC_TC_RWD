@@ -90,6 +90,10 @@ nav{
     }
 }
 
+#menu{
+    display: none;
+}
+
 @media screen and (min-width:769px) and (max-width:1199px){
     @mixin table-box {
         width: 750px;
@@ -100,6 +104,24 @@ nav{
     nav{
         div{
             @include table-box();
+            display: none;
+        }
+
+        #menu{
+            display: block;
+
+            a{
+                display: none;
+
+                &:nth-child(1){
+                    display: block;
+                }
+            }
+
+            &:hover a:nth-child(n+2){
+                display: block;
+                padding: 10px 0;
+            }
         }
     }
 
@@ -140,6 +162,24 @@ nav{
     nav{
         div{
             @include phone-box();
+            display: none;
+        }
+
+        #menu{
+            display: block;
+
+            a{
+                display: none;
+
+                &:nth-child(1){
+                    display: block;
+                }
+            }
+
+            &:hover a:nth-child(n+2){
+                display: block;
+                padding: 10px 0;
+            }
         }
     }
 
